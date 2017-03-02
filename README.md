@@ -1,11 +1,11 @@
-# ember-bootstrap-ds-error-validation
+# ember-bootstrap-ds-error-validations
 
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd ember-bootstrap-ds-error-validation`
+* `cd ember-bootstrap-ds-error-validations`
 * `npm install`
 * `bower install`
 
