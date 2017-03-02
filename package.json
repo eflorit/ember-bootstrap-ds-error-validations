@@ -8,10 +8,12 @@
   "license": "MIT",
   "author": "Etienne Florit",
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eflorit/ember-bootstrap-ds-error-validations.git"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember server",
@@ -51,5 +53,10 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  }
+  },
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/eflorit/ember-bootstrap-ds-error-validations/issues"
+  },
+  "homepage": "https://github.com/eflorit/ember-bootstrap-ds-error-validations#readme"
 }
