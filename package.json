@@ -1,6 +1,6 @@
 {
   "name": "ember-bootstrap-ds-error-validations",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "description": "Ember addon adding support for DS.Error with ember-bootstrap forms",
   "keywords": [
     "ember-addon"
