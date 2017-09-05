@@ -12,7 +12,8 @@ export default BsFormElement.extend({
       let hasErrors = isPresent(errors);
       let errorMessages = null;
 
-      this.set('showValidation', hasErrors);
+      // this.set('showValidation', hasErrors); // ember-bootrap@1.0.0-alpha.3
+      this.set('showAllValidations', hasErrors); // ember-bootrap@1.0.0-rc.2
 
       if (hasErrors) {
         errorMessages = errors.map(function(error) {
