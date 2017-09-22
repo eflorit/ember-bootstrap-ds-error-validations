@@ -6,10 +6,9 @@
 
     ember install ember-bootstrap-ds-error-validations
 
-The following packages also need to be installed:
+The following package also needs to be installed:
 
     ember install ember-bootstrap
-    ember install ember-validations
 
 ## Usage
 

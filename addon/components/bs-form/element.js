@@ -13,7 +13,7 @@ export default BsFormElement.extend({
       let errorMessages = null;
 
       // this.set('showValidation', hasErrors); // ember-bootrap@1.0.0-alpha.3
-      this.set('showAllValidations', hasErrors); // ember-bootrap@1.0.0-rc.2
+      this.set('showOwnValidation', hasErrors); // ember-bootrap@1.0.0-rc.2
 
       if (hasErrors) {
         errorMessages = errors.map(function(error) {
