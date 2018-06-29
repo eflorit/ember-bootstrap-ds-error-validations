@@ -5,11 +5,15 @@ const { computed, defineProperty, isPresent } = Ember;
 
 export default BsFormElement.extend({
   setupValidations() {
-    let propertyErrors = `model.errors.${this.get('property')}`;
+    const property = this.get('property');
+
+    // Workaround: handling nested properties via global `errors` object as they can't directly be watched through `model.errors.my.nested.property`
+    const isNestedProperty = (property || '').indexOf('.') !== -1;
+    const propertyErrors = isNestedProperty ? 'model.errors.[]' : `model.errors.${property}`;
 
     defineProperty(this, 'errors', computed(propertyErrors, () => {
-      let errors = this.get(propertyErrors);
-      let hasErrors = isPresent(errors);
+      const errors = isNestedProperty ? this.get('model.errors').errorsFor(property) : this.get(propertyErrors);
+      const hasErrors = isPresent(errors);
       let errorMessages = null;
 
       // this.set('showValidation', hasErrors); // ember-bootrap@1.0.0-alpha.3
